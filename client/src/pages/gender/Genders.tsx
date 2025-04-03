@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AlertMessage from "../../components/AlertMessage";
-import AddGenderForm from "../../components/forms/AddGenderForm";
-import GendersTable from "../../components/table/GendersTable";
+import AddGenderForm from "../../components/forms/gender/AddGenderForm";
+import GendersTable from "../../components/table/gender/GendersTable";
 import MainLayout from "../layout/MainLayout";
 
 const Genders = () => {

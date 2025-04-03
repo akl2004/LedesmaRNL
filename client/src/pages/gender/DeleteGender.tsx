@@ -1,5 +1,5 @@
 import MainLayout from "../layout/MainLayout";
-import DeleteGenderForm from "../../components/forms/DeleteGenderForm";
+import DeleteGenderForm from "../../components/forms/gender/DeleteGenderForm";
 import AlertMessage from "../../components/AlertMessage";
 import { useState } from "react";
 

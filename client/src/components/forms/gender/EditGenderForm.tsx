@@ -1,10 +1,10 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import GenderService from "../../services/GenderService";
-import ErrorHandler from "../../handler/ErrorHandler";
-import Spinner from "../Spinner";
-import GenderFieldErrors from "../../interfaces/GenderFieldError";
-import SpinnerSmall from "../SpinnerSmall";
+import GenderService from "../../../services/GenderService";
+import ErrorHandler from "../../../handler/ErrorHandler";
+import Spinner from "../../Spinner";
+import GenderFieldErrors from "../../../interfaces/GenderFieldError";
+import SpinnerSmall from "../../SpinnerSmall";
 
 interface EditGenderFormProps {
   onGenderUpdate: (message: string) => void;
@@ -64,7 +64,7 @@ const EditGenderForm = ({ onGenderUpdate }: EditGenderFormProps) => {
   const handleUpdateGender = (e: FormEvent) => {
     e.preventDefault();
 
-        setState((prevState) => ({
+    setState((prevState) => ({
       ...prevState,
       loadingUpdate: true,
     }));

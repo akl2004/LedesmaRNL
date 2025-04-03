@@ -1,9 +1,9 @@
 import { FormEvent, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import GenderService from "../../services/GenderService";
-import ErrorHandler from "../../handler/ErrorHandler";
-import Spinner from "../Spinner";
-import SpinnerSmall from "../SpinnerSmall";
+import GenderService from "../../../services/GenderService";
+import ErrorHandler from "../../../handler/ErrorHandler";
+import Spinner from "../../Spinner";
+import SpinnerSmall from "../../SpinnerSmall";
 
 interface DeleteGenderFormProps {
   onDeleteGender: (message: string) => void;
