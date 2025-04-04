@@ -133,214 +133,220 @@ const AddUserForm = ({
 
   return (
     <>
-      <form ref={formRef} onSubmit={handleStoreUser}>
-        <div className="row">
-          <div className="col-md-6">
-            <div className="mb-3">
-              <label htmlFor="first_name">First Name</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.first_name ? "is_invalid" : ""
-                }`}
-                name="first_name"
-                id="first_name"
-                value={state.first_name}
-                onChange={handleInputChange}
-              />
-              {state.errors.first_name && (
-                <span className="text-danger">
-                  {state.errors.first_name[0]}
-                </span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="middle_name">Middle Name</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.middle_name ? "is_invalid" : ""
-                }`}
-                name="middle_name"
-                id="middle_name"
-                value={state.middle_name}
-                onChange={handleInputChange}
-              />
-              {state.errors.middle_name && (
-                <span className="text-danger">
-                  {state.errors.middle_name[0]}
-                </span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="last_name">Last Name</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.last_name ? "is_invalid" : ""
-                }`}
-                name="last_name"
-                id="last_name"
-                value={state.last_name}
-                onChange={handleInputChange}
-              />
-              {state.errors.last_name && (
-                <span className="text-danger">{state.errors.last_name[0]}</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="suffix_name">Suffix Name</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.suffix_name ? "is_invalid" : ""
-                }`}
-                name="suffix_name"
-                id="suffix_name"
-                value={state.suffix_name}
-                onChange={handleInputChange}
-              />
-              {state.errors.suffix_name && (
-                <span className="text-danger">
-                  {state.errors.suffix_name[0]}
-                </span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="birth_date">Birth Date</label>
-              <input
-                type="date"
-                className={`form-control ${
-                  state.errors.birth_date ? "is_invalid" : ""
-                }`}
-                name="birth_date"
-                id="birth_date"
-                value={state.birth_date}
-                onChange={handleInputChange}
-              />
-              {state.errors.birth_date && (
-                <span className="text-danger">
-                  {state.errors.birth_date[0]}
-                </span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="gender">Gender</label>
-              <select
-                className={`form-control ${
-                  state.errors.gender ? "is_invalid" : ""
-                }`}
-                name="gender"
-                id="gender"
-                value={state.gender}
-                onChange={handleInputChange}
-              >
-                <option value="">Select Gender</option>
-                {state.loadingGenders ? (
-                  <option value="">Loading...</option>
-                ) : (
-                  state.genders.map((gender, index) => (
-                    <option value={gender.gender_id} key={index}>
-                      {gender.gender}
-                    </option>
-                  ))
+      <div>
+        <form ref={formRef} onSubmit={handleStoreUser}>
+          <div className="row">
+            <div className="col-md-6">
+              <div className="mb-3">
+                <label htmlFor="first_name">First Name</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.first_name ? "is_invalid" : ""
+                  }`}
+                  name="first_name"
+                  id="first_name"
+                  value={state.first_name}
+                  onChange={handleInputChange}
+                />
+                {state.errors.first_name && (
+                  <span className="text-danger">
+                    {state.errors.first_name[0]}
+                  </span>
                 )}
-              </select>
-              {state.errors.gender && (
-                <span className="text-danger">{state.errors.gender[0]}</span>
-              )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="middle_name">Middle Name</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.middle_name ? "is_invalid" : ""
+                  }`}
+                  name="middle_name"
+                  id="middle_name"
+                  value={state.middle_name}
+                  onChange={handleInputChange}
+                />
+                {state.errors.middle_name && (
+                  <span className="text-danger">
+                    {state.errors.middle_name[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="last_name">Last Name</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.last_name ? "is_invalid" : ""
+                  }`}
+                  name="last_name"
+                  id="last_name"
+                  value={state.last_name}
+                  onChange={handleInputChange}
+                />
+                {state.errors.last_name && (
+                  <span className="text-danger">
+                    {state.errors.last_name[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="suffix_name">Suffix Name</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.suffix_name ? "is_invalid" : ""
+                  }`}
+                  name="suffix_name"
+                  id="suffix_name"
+                  value={state.suffix_name}
+                  onChange={handleInputChange}
+                />
+                {state.errors.suffix_name && (
+                  <span className="text-danger">
+                    {state.errors.suffix_name[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="birth_date">Birth Date</label>
+                <input
+                  type="date"
+                  className={`form-control ${
+                    state.errors.birth_date ? "is_invalid" : ""
+                  }`}
+                  name="birth_date"
+                  id="birth_date"
+                  value={state.birth_date}
+                  onChange={handleInputChange}
+                />
+                {state.errors.birth_date && (
+                  <span className="text-danger">
+                    {state.errors.birth_date[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="gender">Gender</label>
+                <select
+                  className={`form-select ${
+                    state.errors.gender ? "is_invalid" : ""
+                  }`}
+                  name="gender"
+                  id="gender"
+                  value={state.gender}
+                  onChange={handleInputChange}
+                >
+                  <option value="">Select Gender</option>
+                  {state.loadingGenders ? (
+                    <option value="">Loading...</option>
+                  ) : (
+                    state.genders.map((gender, index) => (
+                      <option value={gender.gender_id} key={index}>
+                        {gender.gender}
+                      </option>
+                    ))
+                  )}
+                </select>
+                {state.errors.gender && (
+                  <span className="text-danger">{state.errors.gender[0]}</span>
+                )}
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="mb-3">
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.address ? "is_invalid" : ""
+                  }`}
+                  name="address"
+                  id="address"
+                  value={state.address}
+                  onChange={handleInputChange}
+                />
+                {state.errors.address && (
+                  <span className="text-danger">{state.errors.address[0]}</span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="contact_number">Contact Number</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.contact_number ? "is_invalid" : ""
+                  }`}
+                  name="contact_number"
+                  id="contact_number"
+                  value={state.contact_number}
+                  onChange={handleInputChange}
+                />
+                {state.errors.contact_number && (
+                  <span className="text-danger">
+                    {state.errors.contact_number[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  className={`form-control ${
+                    state.errors.email ? "is_invalid" : ""
+                  }`}
+                  name="email"
+                  id="email"
+                  value={state.email}
+                  onChange={handleInputChange}
+                />
+                {state.errors.email && (
+                  <span className="text-danger">{state.errors.email[0]}</span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="password">Password</label>
+                <input
+                  type="password"
+                  className={`form-control ${
+                    state.errors.password ? "is_invalid" : ""
+                  }`}
+                  name="password"
+                  id="password"
+                  value={state.password}
+                  onChange={handleInputChange}
+                />
+                {state.errors.password && (
+                  <span className="text-danger">
+                    {state.errors.password[0]}
+                  </span>
+                )}
+              </div>
+              <div className="mb-3">
+                <label htmlFor="password_confirmation">
+                  Password Confirmation
+                </label>
+                <input
+                  type="password"
+                  className={`form-control ${
+                    state.errors.password_confirmation ? "is_invalid" : ""
+                  }`}
+                  name="password_confirmation"
+                  id="password_confirmation"
+                  value={state.password_confirmation}
+                  onChange={handleInputChange}
+                />
+                {state.errors.password_confirmation && (
+                  <span className="text-danger">
+                    {state.errors.password_confirmation[0]}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-          <div className="col-md-6">
-            <div className="mb-3">
-              <label htmlFor="address">Address</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.address ? "is_invalid" : ""
-                }`}
-                name="address"
-                id="address"
-                value={state.address}
-                onChange={handleInputChange}
-              />
-              {state.errors.address && (
-                <span className="text-danger">{state.errors.address[0]}</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="contact_number">Contact Number</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.contact_number ? "is_invalid" : ""
-                }`}
-                name="contact_number"
-                id="contact_number"
-                value={state.contact_number}
-                onChange={handleInputChange}
-              />
-              {state.errors.contact_number && (
-                <span className="text-danger">
-                  {state.errors.contact_number[0]}
-                </span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                className={`form-control ${
-                  state.errors.email ? "is_invalid" : ""
-                }`}
-                name="email"
-                id="email"
-                value={state.email}
-                onChange={handleInputChange}
-              />
-              {state.errors.email && (
-                <span className="text-danger">{state.errors.email[0]}</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                className={`form-control ${
-                  state.errors.password ? "is_invalid" : ""
-                }`}
-                name="password"
-                id="password"
-                value={state.password}
-                onChange={handleInputChange}
-              />
-              {state.errors.password && (
-                <span className="text-danger">{state.errors.password[0]}</span>
-              )}
-            </div>
-            <div className="mb-3">
-              <label htmlFor="password_confirmation">
-                Password Confirmation
-              </label>
-              <input
-                type="password"
-                className={`form-control ${
-                  state.errors.password_confirmation ? "is_invalid" : ""
-                }`}
-                name="password_confirmation"
-                id="password_confirmation"
-                value={state.password_confirmation}
-                onChange={handleInputChange}
-              />
-              {state.errors.password_confirmation && (
-                <span className="text-danger">
-                  {state.errors.password_confirmation[0]}
-                </span>
-              )}
-            </div>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </>
   );
 };
